@@ -34,7 +34,7 @@
     <description>Apache Sling Context-Aware Configuration API</description>
 
     <scm>
-        <connection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-caconfig-api.git</conncetion>
+        <connection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-caconfig-api.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-caconfig-api.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=sling-org-apache-sling-caconfig-api.git</url>
     </scm>
