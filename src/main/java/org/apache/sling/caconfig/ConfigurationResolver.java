@@ -18,9 +18,8 @@
  */
 package org.apache.sling.caconfig;
 
-import javax.annotation.Nonnull;
-
 import org.apache.sling.api.resource.Resource;
+import org.jetbrains.annotations.NotNull;
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -41,6 +40,6 @@ public interface ConfigurationResolver {
      * @param resource Context resource
      * @return Configuration builder
      */
-    @Nonnull ConfigurationBuilder get(@Nonnull Resource resource);
+    @NotNull ConfigurationBuilder get(@NotNull Resource resource);
 
 }

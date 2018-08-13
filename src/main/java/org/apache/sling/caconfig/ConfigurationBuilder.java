@@ -20,9 +20,8 @@ package org.apache.sling.caconfig;
 
 import java.util.Collection;
 
-import javax.annotation.Nonnull;
-
 import org.apache.sling.api.resource.ValueMap;
+import org.jetbrains.annotations.NotNull;
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -37,7 +36,7 @@ public interface ConfigurationBuilder {
      * @param configName Relative path
      * @return Configuration builder
      */
-    @Nonnull ConfigurationBuilder name(@Nonnull String configName);
+    @NotNull ConfigurationBuilder name(@NotNull String configName);
 
     /**
      * Get configuration as singleton resource and its properties mapped to the given annotation class.
@@ -47,7 +46,7 @@ public interface ConfigurationBuilder {
      * @param <T> Annotation class type
      * @return Configuration object. Contains only the default values if content resource or configuration cannot be found.
      */
-    @Nonnull <T> T as(@Nonnull Class<T> clazz);
+    @NotNull <T> T as(@NotNull Class<T> clazz);
 
     /**
      * Get collection of configuration resources with their properties mapped to the given annotation class.
@@ -57,19 +56,19 @@ public interface ConfigurationBuilder {
      * @param <T> Annotation class type
      * @return Collection of configuration objects. Is empty if content resource or configuration cannot be found.
      */
-    @Nonnull <T> Collection<T> asCollection(@Nonnull Class<T> clazz);
+    @NotNull <T> Collection<T> asCollection(@NotNull Class<T> clazz);
 
     /**
      * Get configuration as singleton resource and return its properties as value map.
      * @return Value map. Map is empty if content resource or configuration cannot be found.
      */
-    @Nonnull ValueMap asValueMap();
+    @NotNull ValueMap asValueMap();
 
     /**
      * Get collection of configuration resources with their properties mapped to the given annotation class.
      * @return Collection of value map. Is empty if content resource or configuration cannot be found.
      */
-    @Nonnull Collection<ValueMap> asValueMapCollection();
+    @NotNull Collection<ValueMap> asValueMapCollection();
 
     /**
      * Get configuration as singleton configuration resource and adapt it to the given class.
@@ -77,7 +76,7 @@ public interface ConfigurationBuilder {
      * @param <T> Annotation class type
      * @return Object instance or null if content resource or configuration cannot be found or if the adaption was not possible.
      */
-    <T> T asAdaptable(@Nonnull Class<T> clazz);
+    <T> T asAdaptable(@NotNull Class<T> clazz);
 
     /**
      * Get collection of configuration resources and adapt them to the given class.
@@ -85,6 +84,6 @@ public interface ConfigurationBuilder {
      * @param <T> Annotation class type
      * @return Collection of object instances. Is empty if content resource or configuration cannot be found or if the adaption was not possible.
      */
-    @Nonnull <T> Collection<T> asAdaptableCollection(@Nonnull Class<T> clazz);
+    @NotNull <T> Collection<T> asAdaptableCollection(@NotNull Class<T> clazz);
 
 }

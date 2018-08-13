@@ -20,10 +20,9 @@ package org.apache.sling.caconfig.resource;
 
 import java.util.Collection;
 
-import javax.annotation.CheckForNull;
-import javax.annotation.Nonnull;
-
 import org.apache.sling.api.resource.Resource;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -45,7 +44,7 @@ public interface ConfigurationResourceResolver {
      * @param configName Configuration name or relative path.
      * @return Configuration resource or {@code null}.
      */
-    @CheckForNull Resource getResource(@Nonnull Resource resource, @Nonnull String bucketName, @Nonnull String configName);
+    @Nullable Resource getResource(@NotNull Resource resource, @NotNull String bucketName, @NotNull String configName);
 
     /**
      * Get a collection of context-aware configuration resources defined by the given configuration name.
@@ -56,14 +55,14 @@ public interface ConfigurationResourceResolver {
      * @param configName Configuration name or relative path.
      * @return Collection of configuration resources, the collection might be empty.
      */
-    @Nonnull Collection<Resource> getResourceCollection(@Nonnull Resource resource, @Nonnull String bucketName, @Nonnull String configName);
+    @NotNull Collection<Resource> getResourceCollection(@NotNull Resource resource, @NotNull String bucketName, @NotNull String configName);
 
     /**
      * Get the inner-most context path (deepest path) returned by {@link #getAllContextPaths(Resource)}.
      * @param resource Context resource to fetch configuration for
      * @return Context path or null
      */
-    String getContextPath(@Nonnull Resource resource);
+    String getContextPath(@NotNull Resource resource);
 
     /**
      * Get all context paths for which context-aware configurations could be defined.
@@ -72,6 +71,6 @@ public interface ConfigurationResourceResolver {
      * @param resource Context resource to fetch configuration for
      * @return List of context paths
      */
-    @Nonnull Collection<String> getAllContextPaths(@Nonnull Resource resource);
+    @NotNull Collection<String> getAllContextPaths(@NotNull Resource resource);
 
 }
