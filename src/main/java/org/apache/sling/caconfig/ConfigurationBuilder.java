@@ -60,13 +60,13 @@ public interface ConfigurationBuilder {
 
     /**
      * Get configuration as singleton resource and return its properties as value map.
-     * @return Value map. Map is empty if content resource or configuration cannot be found.
+     * @return Value map. If content resource or configuration cannot be found the map is empty unless default or configuration override values are present for this configuration.
      */
     @NotNull ValueMap asValueMap();
 
     /**
      * Get collection of configuration resources with their properties mapped to the given annotation class.
-     * @return Collection of value map. Is empty if content resource or configuration cannot be found.
+     * @return Collection of value maps. Is empty if content resource or configuration cannot be found.
      */
     @NotNull Collection<ValueMap> asValueMapCollection();
 
