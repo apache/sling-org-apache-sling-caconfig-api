@@ -86,4 +86,11 @@ public interface ConfigurationBuilder {
      */
     @NotNull <T> Collection<T> asAdaptableCollection(@NotNull Class<T> clazz);
 
+    /**
+     * Check if the configuration node is existing
+     * @param clazz Class that can be adapted from a {@link org.apache.sling.api.resource.Resource}
+     * @param <T> Annotation class type
+     * @return True/False based on configuration resource node existence in JCR.
+     */
+    @NotNull <T> boolean has(@NotNull Class<T> clazz);
 }
