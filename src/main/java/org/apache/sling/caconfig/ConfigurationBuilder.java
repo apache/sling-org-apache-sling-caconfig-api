@@ -32,7 +32,7 @@ public interface ConfigurationBuilder {
 
     /**
      * Define configuration name.
-     * Optional for the {@link #as(Class)} and {@link #asCollection(Class)} methods, mandatory for the others. 
+     * Optional for the {@link #as(Class)}, {@link #asCollection(Class)} and {@link #has(Class)} methods, mandatory for the others.
      * @param configName Relative path
      * @return Configuration builder
      */
@@ -92,7 +92,6 @@ public interface ConfigurationBuilder {
      * checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
      * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in
      * the configuration definition.
-     * Configuration name is optional - if not given via {@link #name(String)} method, it is derived from the annotation interface class name.
      * @param clazz Class that can be adapted from a {@link org.apache.sling.api.resource.Resource}
      * @param <T> Annotation class type
      * @return True/False based on configuration resource node existence in JCR.
