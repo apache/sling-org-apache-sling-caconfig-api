@@ -87,14 +87,13 @@ public interface ConfigurationBuilder {
     @NotNull <T> Collection<T> asAdaptableCollection(@NotNull Class<T> clazz);
 
     /**
-     * Check if the configuration node is existing in the JCR. This method checks for the configuration existence based on {@code configName} defined in the
-     * configuration definition. It checks if the configuration is available for the context path in the current resource hierarchy and if not found, also
-     * checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
+     * Check if the configuration node is existing in the resource hierarchy. This method checks for the configuration existence based on {@code configName} 
+     * defined in the configuration definition. It checks if the configuration is available for the context path in the current resource hierarchy and if not 
+     * found, also checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
      * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in
      * the configuration definition.
-     * @param clazz Class that can be adapted from a {@link org.apache.sling.api.resource.Resource}
-     * @param <T> Annotation class type
+     * @param configName Name of the configuration
      * @return True/False based on configuration resource node existence in JCR.
      */
-    @NotNull <T> boolean has(@NotNull Class<T> clazz);
+    boolean has(@NotNull String configName);
 }
