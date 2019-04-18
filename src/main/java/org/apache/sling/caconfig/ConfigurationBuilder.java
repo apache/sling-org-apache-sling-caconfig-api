@@ -32,7 +32,7 @@ public interface ConfigurationBuilder {
 
     /**
      * Define configuration name.
-     * Optional for the {@link #as(Class)}, {@link #asCollection(Class)} and {@link #has(Class)} methods, mandatory for the others.
+     * Optional for the {@link #as(Class)} and {@link #asCollection(Class)}, mandatory for the others.
      * @param configName Relative path
      * @return Configuration builder
      */
