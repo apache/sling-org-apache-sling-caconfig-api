@@ -32,7 +32,7 @@ public interface ConfigurationBuilder {
 
     /**
      * Define configuration name.
-     * Optional for the {@link #as(Class)} and {@link #asCollection(Class)}, mandatory for the others.
+     * Optional for the {@link #as(Class)}, {@link #asCollection(Class)} and {@link #has(Class)} methods, mandatory for the others.
      * @param configName Relative path
      * @return Configuration builder
      */
@@ -87,13 +87,25 @@ public interface ConfigurationBuilder {
     @NotNull <T> Collection<T> asAdaptableCollection(@NotNull Class<T> clazz);
 
     /**
-     * Check if the configuration node is existing in the resource hierarchy. This method checks for the configuration existence based on {@code configName} 
-     * defined in the configuration definition. It checks if the configuration is available for the context path in the current resource hierarchy and if not 
-     * found, also checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
+     * This method checks for the configuration existence based on {@code configName} defined in the configuration definition. It extracts the {@code configName} 
+     * from the given annotation class and checks if the configuration is available for the context path in the current resource hierarchy. If not found, also
+     * checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
+     * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in
+     * the configuration definition.
+     * @param clazz Class that can be adapted from a {@link org.apache.sling.api.resource.Resource}
+     * @param <T> Annotation class type
+     * @return True/False based on configuration resource node existence in JCR.
+     */
+    <T> boolean has(@NotNull Class<T> clazz);
+
+    /**
+     * This method checks for the configuration existence based on provided {@code configName} value.
+     * It checks if the configuration is available for the context path in the current resource hierarchy and if not found, also
+     * checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
      * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in
      * the configuration definition.
      * @param configName Name of the configuration
      * @return True/False based on configuration resource node existence in JCR.
      */
-    boolean has(@NotNull String configName);
+    <T> boolean has(String configName);
 }
