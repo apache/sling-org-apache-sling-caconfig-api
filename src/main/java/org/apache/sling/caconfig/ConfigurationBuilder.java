@@ -107,5 +107,5 @@ public interface ConfigurationBuilder {
      * @param configName Name of the configuration
      * @return True/False based on configuration resource node existence in JCR.
      */
-    <T> boolean has(String configName);
+    boolean has(String configName);
 }
