@@ -94,7 +94,7 @@ public interface ConfigurationBuilder {
      * the configuration definition.
      * @param clazz Class that can be adapted from a {@link org.apache.sling.api.resource.Resource}
      * @param <T> Annotation class type
-     * @return True/False based on configuration resource node existence in JCR.
+     * @return True/False based on configuration resource node existence.
      */
     <T> boolean has(@NotNull Class<T> clazz);
 
@@ -105,7 +105,7 @@ public interface ConfigurationBuilder {
      * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in
      * the configuration definition.
      * @param configName Name of the configuration
-     * @return True/False based on configuration resource node existence in JCR.
+     * @return True/False based on configuration resource node existence.
      */
     boolean has(String configName);
 }
