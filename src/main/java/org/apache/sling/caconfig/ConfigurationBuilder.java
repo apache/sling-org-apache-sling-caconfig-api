@@ -102,10 +102,11 @@ public interface ConfigurationBuilder {
      * This method checks for the configuration existence based on provided {@code configName} value.
      * It checks if the configuration is available for the context path in the current resource hierarchy and if not found, also
      * checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
-     * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in
+     * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}. This method does not consider the default values provided in
      * the configuration definition.
      * @param configName Name of the configuration
      * @return True/False based on configuration resource node existence.
      */
-    boolean has(String configName);
+    boolean has(@NotNull String configName);
+
 }
