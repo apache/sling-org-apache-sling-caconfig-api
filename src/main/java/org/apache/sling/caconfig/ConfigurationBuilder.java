@@ -89,7 +89,7 @@ public interface ConfigurationBuilder {
     /**
      * This method checks for the configuration existence based on {@code configName} defined in the configuration definition. It extracts the {@code configName} 
      * from the given annotation class and checks if the configuration is available for the context path in the current resource hierarchy. If not found, also
-     * checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
+     * checks in the global fall-back paths configured via <code>org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy</code>
      * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in
      * the configuration definition.
      * @param clazz Class that can be adapted from a {@link org.apache.sling.api.resource.Resource}
@@ -101,7 +101,7 @@ public interface ConfigurationBuilder {
     /**
      * This method checks for the configuration existence based on provided {@code configName} value.
      * It checks if the configuration is available for the context path in the current resource hierarchy and if not found, also
-     * checks in the global fall-back paths configured via {@link org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy}
+     * checks in the global fall-back paths configured via <code>org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy</code>
      * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}. This method does not consider the default values provided in
      * the configuration definition.
      * @param configName Name of the configuration
