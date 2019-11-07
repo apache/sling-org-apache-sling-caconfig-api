@@ -20,5 +20,5 @@
  * API for accessing context-aware configuration resources.
  * This is a low-level API.
  */
-@org.osgi.annotation.versioning.Version("1.0.1")
+@org.osgi.annotation.versioning.Version("1.0.2")
 package org.apache.sling.caconfig.resource;
