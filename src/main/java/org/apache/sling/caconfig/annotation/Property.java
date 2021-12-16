@@ -34,20 +34,20 @@ public @interface Property {
      * @return Label for the property (e.g. for configuration editor GUIs).
      */
     String label() default "";
-    
+
     /**
      * @return Description for the property (e.g. for configuration editor GUIs).
      */
     String description() default "";
-    
+
     /**
      * @return Further properties e.g. for configuration editor GUIs.
      */
     String[] property() default {};
-    
+
     /**
      * @return Number to control property order in configuration editor.
      */
     int order() default 0;
-    
+
 }

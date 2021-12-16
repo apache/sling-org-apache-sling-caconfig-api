@@ -38,7 +38,7 @@ public interface ConfigurationResourceResolver {
      * Get a context-aware singleton configuration resource defined by the given configuration name.
      *
      * @param resource Context resource to fetch configuration for
-     * @param bucketName Configuration "bucket" name. Each high-level configuration resolver should store 
+     * @param bucketName Configuration "bucket" name. Each high-level configuration resolver should store
      *     it's configuration data grouped in a child resource of the configuration resource. This is what
      *     we call a "bucket", and the resource name is specified with this parameter.
      * @param configName Configuration name or relative path.
@@ -49,7 +49,7 @@ public interface ConfigurationResourceResolver {
     /**
      * Get a collection of context-aware configuration resources defined by the given configuration name.
      * @param resource Context resource to fetch configuration for
-     * @param bucketName Configuration "bucket" name. Each high-level configuration resolver should store 
+     * @param bucketName Configuration "bucket" name. Each high-level configuration resolver should store
      *     it's configuration data grouped in a child resource of the configuration resource. This is what
      *     we call a "bucket", and the resource name is specified with this parameter.
      * @param configName Configuration name or relative path.

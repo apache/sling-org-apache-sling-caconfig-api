@@ -87,7 +87,7 @@ public interface ConfigurationBuilder {
     @NotNull <T> Collection<T> asAdaptableCollection(@NotNull Class<T> clazz);
 
     /**
-     * This method checks for the configuration existence based on {@code configName} defined in the configuration definition. It extracts the {@code configName} 
+     * This method checks for the configuration existence based on {@code configName} defined in the configuration definition. It extracts the {@code configName}
      * from the given annotation class and checks if the configuration is available for the context path in the current resource hierarchy. If not found, also
      * checks in the global fall-back paths configured via <code>org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy</code>
      * which by default are {@code /conf/global}, {@code /apps/config} and {@code /libs/config}.This method does not consider the default values provided in

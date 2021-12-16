@@ -24,7 +24,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Marks an annotation class to be useable with Sling context-aware configuration. 
+ * Marks an annotation class to be useable with Sling context-aware configuration.
  */
 @Target(ElementType.ANNOTATION_TYPE)
 @Retention(RetentionPolicy.RUNTIME)
@@ -34,22 +34,22 @@ public @interface Configuration {
      * @return Allows to overwrite the configuration name. If not set the class name of the annotation is used.
      */
     String name() default "";
-    
+
     /**
      * @return Label for the resource (e.g. for configuration editor GUIs).
      */
     String label() default "";
-    
+
     /**
      * @return Description for the resource (e.g. for configuration editor GUIs).
      */
     String description() default "";
-    
+
     /**
      * @return Further properties e.g. for configuration editor GUIs.
      */
     String[] property() default {};
-    
+
     /**
      * @return Indicates that this definition should be used for configuration collections.
      */
