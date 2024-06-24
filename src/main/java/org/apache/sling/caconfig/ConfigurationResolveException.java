@@ -34,5 +34,4 @@ public final class ConfigurationResolveException extends RuntimeException {
     public ConfigurationResolveException(String message) {
         super(message);
     }
-
 }

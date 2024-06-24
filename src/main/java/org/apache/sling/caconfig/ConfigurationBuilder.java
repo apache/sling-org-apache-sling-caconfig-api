@@ -36,7 +36,8 @@ public interface ConfigurationBuilder {
      * @param configName Relative path
      * @return Configuration builder
      */
-    @NotNull ConfigurationBuilder name(@NotNull String configName);
+    @NotNull
+    ConfigurationBuilder name(@NotNull String configName);
 
     /**
      * Get configuration as singleton resource and its properties mapped to the given annotation class.
@@ -46,7 +47,8 @@ public interface ConfigurationBuilder {
      * @param <T> Annotation class type
      * @return Configuration object. Contains only the default values if content resource or configuration cannot be found.
      */
-    @NotNull <T> T as(@NotNull Class<T> clazz);
+    @NotNull
+    <T> T as(@NotNull Class<T> clazz);
 
     /**
      * Get collection of configuration resources with their properties mapped to the given annotation class.
@@ -56,19 +58,22 @@ public interface ConfigurationBuilder {
      * @param <T> Annotation class type
      * @return Collection of configuration objects. Is empty if content resource or configuration cannot be found.
      */
-    @NotNull <T> Collection<T> asCollection(@NotNull Class<T> clazz);
+    @NotNull
+    <T> Collection<T> asCollection(@NotNull Class<T> clazz);
 
     /**
      * Get configuration as singleton resource and return its properties as value map.
      * @return Value map. If content resource or configuration cannot be found the map is empty unless default or configuration override values are present for this configuration.
      */
-    @NotNull ValueMap asValueMap();
+    @NotNull
+    ValueMap asValueMap();
 
     /**
      * Get collection of configuration resources with their properties mapped to the given annotation class.
      * @return Collection of value maps. Is empty if content resource or configuration cannot be found.
      */
-    @NotNull Collection<ValueMap> asValueMapCollection();
+    @NotNull
+    Collection<ValueMap> asValueMapCollection();
 
     /**
      * Get configuration as singleton configuration resource and adapt it to the given class.
@@ -84,7 +89,8 @@ public interface ConfigurationBuilder {
      * @param <T> Annotation class type
      * @return Collection of object instances. Is empty if content resource or configuration cannot be found or if the adaption was not possible.
      */
-    @NotNull <T> Collection<T> asAdaptableCollection(@NotNull Class<T> clazz);
+    @NotNull
+    <T> Collection<T> asAdaptableCollection(@NotNull Class<T> clazz);
 
     /**
      * This method checks for the configuration existence based on {@code configName} defined in the configuration definition. It extracts the {@code configName}
@@ -108,5 +114,4 @@ public interface ConfigurationBuilder {
      * @return True/False based on configuration resource node existence.
      */
     boolean has(@NotNull String configName);
-
 }

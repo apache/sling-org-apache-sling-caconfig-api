@@ -49,5 +49,4 @@ public @interface Property {
      * @return Number to control property order in configuration editor.
      */
     int order() default 0;
-
 }
