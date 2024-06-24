@@ -40,6 +40,6 @@ public interface ConfigurationResolver {
      * @param resource Context resource
      * @return Configuration builder
      */
-    @NotNull ConfigurationBuilder get(@NotNull Resource resource);
-
+    @NotNull
+    ConfigurationBuilder get(@NotNull Resource resource);
 }

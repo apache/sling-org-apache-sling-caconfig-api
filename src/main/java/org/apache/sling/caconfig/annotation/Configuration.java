@@ -54,5 +54,4 @@ public @interface Configuration {
      * @return Indicates that this definition should be used for configuration collections.
      */
     boolean collection() default false;
-
 }

@@ -44,7 +44,8 @@ public interface ConfigurationResourceResolver {
      * @param configName Configuration name or relative path.
      * @return Configuration resource or {@code null}.
      */
-    @Nullable Resource getResource(@NotNull Resource resource, @NotNull String bucketName, @NotNull String configName);
+    @Nullable
+    Resource getResource(@NotNull Resource resource, @NotNull String bucketName, @NotNull String configName);
 
     /**
      * Get a collection of context-aware configuration resources defined by the given configuration name.
@@ -55,7 +56,9 @@ public interface ConfigurationResourceResolver {
      * @param configName Configuration name or relative path.
      * @return Collection of configuration resources, the collection might be empty.
      */
-    @NotNull Collection<Resource> getResourceCollection(@NotNull Resource resource, @NotNull String bucketName, @NotNull String configName);
+    @NotNull
+    Collection<Resource> getResourceCollection(
+            @NotNull Resource resource, @NotNull String bucketName, @NotNull String configName);
 
     /**
      * Get the inner-most context path (deepest path) returned by {@link #getAllContextPaths(Resource)}.
@@ -71,6 +74,6 @@ public interface ConfigurationResourceResolver {
      * @param resource Context resource to fetch configuration for
      * @return List of context paths
      */
-    @NotNull Collection<String> getAllContextPaths(@NotNull Resource resource);
-
+    @NotNull
+    Collection<String> getAllContextPaths(@NotNull Resource resource);
 }
