@@ -49,4 +49,13 @@ public @interface Property {
      * @return Number to control property order in configuration editor.
      */
     int order() default 0;
+
+    /**
+     * Indicates whether the property value is encrypted in the underlying repository storage and should be automatically
+     * decrypted during reading.
+     * It also acts as a hint for configuration editor GUIs to write the property value in encrypted form.
+     * @return {@code true} if the property value is encrypted, {@code false} otherwise.
+     * @since 1.2.0 (Bundle version 1.4.0)
+     */
+    boolean encrypted() default false;
 }
